@@ -46,5 +46,35 @@ background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, 
     padding-top:20px;
     padding-bottom: 20px;
     background-color:rgb(216, 57, 43);
-    
+}
+
+.JakoCrvenaPozadina{
+    background-color:rgb(216, 57, 43);
+}
+
+.SlaboCrvenaPozadina{
+    background-color: #EA4C3D !important; 
+}
+
+.belaSlova{
+    color: white;
+}
+
+.razvuci{
+    text-align: justify;
+}
+
+.regBox{
+    max-width: 580px !important;
+    margin-bottom: 50px !important;
+    margin-top: 50px !important;
+}
+
+.sivaSlova{
+    color: gray;
+}
+
+.nopadding{
+    padding-left:0;
+    margin-left: 0;
 }
