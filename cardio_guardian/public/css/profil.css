@@ -1,0 +1,69 @@
+body{
+    background-color:#f1f1f1;
+}
+
+.picture{
+    width:70%;
+	
+    padding-top: 50px;
+    box-shadow: 0 30px 10px 0 rgba(0,0,0,0.5);
+    padding-left:20px;
+    padding-right:20px;
+    margin-left: 15%;
+}
+
+.name{
+    text-align: center;
+    color:white;
+}  
+
+h3{
+    color: #021B79;
+}
+
+.velika_slova{
+    color: white;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: Oswald;
+}
+
+.slovaMala{
+    color: #021B79;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: Oswald;
+}
+
+.slovaVelika{
+    color: #021B79;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Oswald;
+}
+
+.slika{
+    padding-top: 20px;
+    background: #0575E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #021B79, #0a63bd);
+}
+
+.dugmeOceniPsihologa {
+	width: 230px;
+	background-color: #021B79 !important;
+	color:white !important;  
+}
+
+.select-input{
+    height: 100%;
+    width: 100%;
+    outline:none;
+    padding-left:15px;
+    padding-bottom:5px;
+    font-size:17px;
+    border-radius:5px;
+    border: 1px solid black;
+    border-bottom-width:1px;
+    margin-top: 15px;
+}

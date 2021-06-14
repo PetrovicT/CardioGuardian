@@ -1,0 +1,50 @@
+.slova{
+    color:#EBEBEB;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+}
+
+.pozadina{
+background: rgb(220,41,24);
+background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, rgb(235, 235, 235) 100%);
+}
+
+.slova:hover{
+    color:#EBEBEB;
+    text-shadow: none;
+}
+
+.slika{
+    box-shadow: 2px 2px 8px 2px black;
+}
+
+
+.sivaPozadina {
+    background-color: #EBEBEB;
+}
+
+.crvenaPozadina{
+    background: rgb(220,41,24);
+    background: linear-gradient(90deg, rgb(216, 57, 43) 0%, rgba(234,76,61,1) 65%, rgb(228, 92, 92) 100%);
+    }
+
+.slovaJakoCrvena {
+    color: #DC2918;
+}
+
+.slovaSlaboCrvena{
+    color:#EA4C3D;
+}
+
+.footer_slika{
+    width: 45%;
+  
+}
+
+.footer_stil{
+    padding-left:32px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    background-color:rgb(216, 57, 43);
+    
+}
