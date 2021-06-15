@@ -19,7 +19,7 @@
         <title>Trenutno stanje</title> 
     </head>
 
-    <body class="sivaPozadina">
+    <body class="sivaPozadina" onload=inicijalizujTabelu()>
 
         <!-- Header -->
         <?php
@@ -67,7 +67,7 @@
                     </tr>  <tr>
                         <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Donji pritisak:</td>
                         <td id="4" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">86</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">60-120</td>
+                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">70-120</td>
                     </tr>
                     <tr>
                         <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Otkucaji srca:</td>
@@ -87,7 +87,7 @@
                     <tr>
                         <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Nivo šećera tokom spavanja:</td>
                         <td id="8" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">110</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">60-120</td>
+                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">< 120</td>
                     </tr>
                     <tr>
                         <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Rezultati elektrokardiograma:</td>
@@ -97,7 +97,7 @@
                     <tr>
                         <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Oldpeak:</td>
                         <td id="10" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">3</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">2-3</td>
+                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">2.5-3.5</td>
                     </tr>
                     <tr>
                         <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">ST slope:</td>
@@ -109,10 +109,19 @@
     </div>
 </div>
 
+     
 
-                        </div>
+                    </div>
 
-                   
+
+
+                    </div>
+
+                    <div class="w3-container sivaPozadina w3-margin w3-padding-large w3-card-4">
+                    <div class=" w3-center">
+                    
+                    <button onclick="analizaVrednosti()" class="w3-bar-item w3-button w3-red letters dugme">Analiza izmerenih vrednosti</button>
+                    </div>
                     </div>
                     <hr>
                     <br>   <br>    <br>

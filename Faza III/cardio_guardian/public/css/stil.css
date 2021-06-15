@@ -103,3 +103,23 @@ background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, 
     font-size: 24px;
     font-weight: bold;
 }
+
+.basLose {
+    background-color: #EA4C3D;
+}
+
+.lose {
+    background-color: rgba(238, 208, 109, 0.904);
+}
+
+.dobro {
+    background-color: rgb(118, 202, 92);
+}
+
+.fantasticno {
+    background-color: rgb(94, 200, 138);
+}
+
+.belaSlova {
+    color: white;
+}
