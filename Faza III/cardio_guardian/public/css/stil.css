@@ -78,3 +78,28 @@ background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, 
     padding-left:0;
     margin-left: 0;
 }
+
+.graf{
+    width: 100% !important;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.dugme{
+    width: 80%;
+}
+
+.podatakUTabeli{
+    width: 33% !important;
+}
+
+.slovaSlaboCrvenaMala{
+    color:#EA4C3D;
+    font-size: 22px;
+}
+
+.slovaJakoCrvenaMala{
+    color:#EA4C3D;
+    font-size: 24px;
+    font-weight: bold;
+}
