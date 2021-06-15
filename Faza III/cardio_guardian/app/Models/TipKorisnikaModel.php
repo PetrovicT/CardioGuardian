@@ -6,8 +6,8 @@ use CodeIgniter\Model;
 
 class TipKorisnikaModel extends Model {
     // Konstante za pristup
-    const korisnikNaziv = 'Korisnik';
-    const psihologNaziv = 'Psiholog';
+    const korisnikNaziv = 'Standard';
+    const psihologNaziv = 'Premium';
     const administratorNaziv = 'Administrator';
     
     protected $table = 'tip_korisnika';

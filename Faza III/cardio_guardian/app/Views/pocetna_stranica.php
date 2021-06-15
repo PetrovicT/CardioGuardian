@@ -8,11 +8,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+       
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/pitanja.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/pocetna.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/stil.css">
         <style>h1,h2,h3,h4,h5,h6 {font-family: "Oswald"} body {font-family: "Open Sans"}</style>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src = "<?php echo base_url(); ?>/js/script.js"></script>
         <title>Homepage</title> 
     </head>
@@ -56,9 +58,9 @@
                         $referencaRegister=site_url("$controller/register");
                         echo '
                         <div class=" w3-center">
-                            <div class="overlay slovaJakoCrvena" style="font-size: 28px;"><i class="fa fa-user"></i> Već imate nalog?
+                            <div class="overlay slovaJakoCrvena" style="font-size: 28px;"><i class="fa fa-heartbeat"></i> Već imate nalog?
                             <a href=' . "$referencaLogin" . '>LOGIN</a></div>
-                            <div class="overlay slovaJakoCrvena" style="font-size: 28px;"><i class="fa fa-user"></i>
+                            <div class="overlay slovaJakoCrvena" style="font-size: 28px;"><i class="fa fa-heartbeat"></i>
                                 Nemate nalog?  <a href=' . "$referencaRegister" . '>REGISTRUJ SE</a></div>
                             <br>
                         </div>
@@ -69,7 +71,7 @@
                             $referencaLogout=site_url("$controller/logout");
                             echo '
                             <div class=" w3-center">
-                                <div class="overlay slovaJakoCrvena" style="font-size: 28px;"><i class="fa fa-user"></i> Želite da se izlogujete?
+                                <div class="overlay slovaJakoCrvena" style="font-size: 28px;"><i class="fa fa-heartbeat"></i> Želite da se izlogujete?
                                 <a href=' . "$referencaLogout" . '>LOGOUT</a></div>
                                 <br>
                             </div>

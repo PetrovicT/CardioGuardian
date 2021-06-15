@@ -1,5 +1,3 @@
-<!-- Katzenberger Viktor -->
-<!-- Urosevic Vera -->
 
 <!DOCTYPE html>
 <html>

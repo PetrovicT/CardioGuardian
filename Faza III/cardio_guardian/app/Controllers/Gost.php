@@ -14,7 +14,6 @@ class Gost extends BaseController
             return redirect()->to(site_url($this->session->get('controller') . "/index"));
         }
         echo view("pocetna_stranica");
-        //$this->prikaz('pocetna_stranica',[]);
     }
 
     // Stranica za login, ne funkcionalnost logovanja

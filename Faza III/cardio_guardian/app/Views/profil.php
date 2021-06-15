@@ -1,5 +1,3 @@
-<!-- Petrovic Teodora -->
-<!-- Urosevic Vera -->
 
 <!DOCTYPE html>
 <html>
@@ -17,6 +15,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/profil.css">
         <style>h1,h2,h3,h4,h5,h6 {font-family: "Oswald"} body {font-family: "Open Sans"}</style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src = "<?php echo base_url(); ?>/js/profil.js"></script>
         <script src = "<?php echo base_url(); ?>/js/script.js"></script>
         <title>Pregled profila</title>
