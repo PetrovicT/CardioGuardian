@@ -29,14 +29,14 @@ h3{
 }
 
 .slovaMala{
-    color: #021B79;
+    color: white;
     font-size: 20px;
     font-weight: normal;
     font-family: Oswald;
 }
 
 .slovaVelika{
-    color: #021B79;
+    color: white;
     font-size: 26px;
     font-weight: bold;
     font-family: Oswald;
@@ -44,9 +44,8 @@ h3{
 
 .slika{
     padding-top: 20px;
-    background: #0575E6;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #021B79, #0a63bd);
+    background: rgb(220,41,24);
+    background: linear-gradient(90deg, rgb(216, 57, 43) 0%, rgba(234,76,61,1) 65%, rgb(228, 92, 92) 100%);
 }
 
 .dugmeOceniPsihologa {

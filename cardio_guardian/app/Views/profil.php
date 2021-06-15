@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/style.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>/css/stil.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/pitanja.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/profil.css">
         <style>h1,h2,h3,h4,h5,h6 {font-family: "Oswald"} body {font-family: "Open Sans"}</style>
@@ -82,57 +83,60 @@
         
         
             
-        <div class="w3-row w3-center picture">
+        <div class="w3-row w3-center picture crvenaPozadina">
    
 
-                    <div class="w3-col s12"> 
-                        <div class="w3-center w3-text-white slika">';
+            <div class="w3-col s12"> 
+            <div class="w3-center w3-text-white">';
             if ($korisnik->slika == null) {
                 ?>
-                <img src="<?php echo base_url(); ?>/photos/no_picture.png" alt="" style="width:20%;">  
+                <img src="<?php echo base_url(); ?>/photos/no_picture2.png" alt="" style="width:20%;">  
                 <?php
             } else
                 echo '<img src="data:image/jpeg;base64,' . base64_encode($korisnik->slika) . '">';
 
             echo '</div>
                     </div>
-                    <br>
+                  
                 
 
                 <div class="w3-row w3-center">
-                    <div class="w3-col s12 color-dark-blue"> 
+                    <div class="w3-col s12"> 
                     <br>
                         <div class="w3-center w3-text-white velika_slova"> ' . "$username" . '</div>
-                    <br>
+              
                     </div>
                 </div>
-                <br>
+                
+       
                            
-
+                <hr>
                 <div class="w3-row w3-center">
                     <div class="w3-col s12"> 
                         <div class="slovaVelika">Lično ime: </div>
                         <div class="slovaMala">' . "$licnoIme" . '</div>  
                     </div>  
                 </div>  
+               <hr>
                 <div class="w3-row" >
                     <div class="w3-col s12"> 
                         <div class="slovaVelika">Grad: </div>
                         <div class="slovaMala">' . "$nazivGrada" . '</div>
                     </div>
                 </div>
+                <hr>
                 <div class="w3-row"">
                     <div class="slovaVelika">Email adresa: </div>
                     <div class="slovaMala">' . "$email" . '</div>
                 </div>
+                <hr>
                 <div class="w3-row">
                     <div class="slovaVelika ">Pol: </div>
                     <div class="slovaMala ">' . "$pol" . '</div>
                 </div>
-                <div class="w3-row">
-                    <div class="slovaVelika ">Kategorija korisnika: </div>
-                    <div class="slovaMala ">' . "$kategorija" . '</div>
-                </div>
+               
+               
+                
                 <br>
 
             </div>

@@ -68,8 +68,8 @@
                         else {
                             $referencaLogout=site_url("$controller/logout");
                             echo '
-                            <div class=" w3-left">
-                                <div class="overlay letters_dark_blue" style="font-size: 28px;"><i class="fa fa-user"></i> Želite da se izlogujete?
+                            <div class=" w3-center">
+                                <div class="overlay slovaJakoCrvena" style="font-size: 28px;"><i class="fa fa-user"></i> Želite da se izlogujete?
                                 <a href=' . "$referencaLogout" . '>LOGOUT</a></div>
                                 <br>
                             </div>
@@ -78,7 +78,7 @@
                         ?>
                     </div>
                     <hr>
-                    <br>
+                    <br>   <br>    <br>
     <!-- KRAJ UNOSI -->
     </div>
     
