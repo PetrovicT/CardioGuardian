@@ -32,4 +32,16 @@ class Standard extends BaseController {
     public function trenutnoStanje() {
         echo view("trenutnoStanje.php");
     }
+ 
+    // Stranica za data prikupljanje, ne funkcionalnost data prikupljanja
+    public function ostaliPodaci($porukaList = null) {
+        echo view("ostaliPodaci", ['DataErrorMessages' => $porukaList]);
+    }
+
+    // Funkcionalnost data prikupljanja
+    public function dataSubmit() {
+        echo view("uspesnoSlanjePodataka.php");
+    }
+
+
 }

@@ -132,13 +132,13 @@
           labels: xValues,
           datasets: [
         { 
-          data: [0,0,0,1,2,2,1,0,1,1],
+          data: [0,0,0,1,2,1,1,0,1,1],
           borderColor: "red",
           fill: false,
           // 0 je dobro, 1 je lose, 2 je bas lose
           label: "resting electrocardiogram results"
           },{ 
-          data: [0,0,1,1.5,2,1.5,3.5,2.5,1,1.5],
+          data: [0,0,1,1.5,1.5,1.5,3.5,2.5,1.5,1.5],
           borderColor: "#F8A488",
           fill: false,
           // 0, 0.5, 1, 1.5, 2, 2.5, 3

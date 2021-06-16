@@ -112,7 +112,6 @@ background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, 
     background-color: rgba(238, 208, 109, 0.904);
 }
 
-
 .fantasticno {
     background-color: rgb(94, 200, 138);
 }
@@ -132,4 +131,18 @@ background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, 
     font-size: 20px;
     font-weight: bold;
     text-align: justify;
+}
+
+.paddingLevo{
+    padding-left: 30%;
+}
+
+.bela_velika_slova {
+   font-size: 18px;
+}
+
+.padding{
+    padding-bottom: 11%;
+    padding-top: 7%;
+
 }

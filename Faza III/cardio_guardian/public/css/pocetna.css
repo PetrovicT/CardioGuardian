@@ -18,7 +18,6 @@ div.container {
   text-align: center;
 }
 
-
 .grid_input {
   width: 100%;
   display: flex;
@@ -41,8 +40,7 @@ div.container {
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color:  #021B79;
 }
-    
-    
+     
 .category {
   width: 300px; 
   cursor: pointer;
@@ -55,7 +53,7 @@ div.container {
 
 #search_pocetna{
   border: none;
-   background-color: #EBEBEB;
+  background-color: #EBEBEB;
 }
 
 .nema_podvlacenja{

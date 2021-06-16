@@ -50,6 +50,12 @@
                             <img src="<?php echo base_url(); ?>/photos/cardioguardian.png" alt="">
                         </div>
 
+                        <div class=" w3-center">
+                            <div class="overlay slovaJakoCrvena" style="font-size: 28px;"> Čuvar Vašeg zdravlja! Sa Vama uvek i svuda!</div>
+                           <br> <br>
+                        </div>
+                       
+
                         <!-- LINK LOGIN/REGISTRACIJA -->
                         <?php
                         // samo ako je kontroler gost onda prikazi opcije da se registrujes i login

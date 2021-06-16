@@ -241,3 +241,7 @@ function analizaTekst(tekst,id,boja){
     if (boja==2) document.getElementById("span"+id).classList.add("slovaLoseMala");
     document.getElementById("span"+id).innerHTML="<br>"+tekst;
 }
+
+function updateTextInput(val) {
+    document.getElementById('textInput').value=val; 
+  }

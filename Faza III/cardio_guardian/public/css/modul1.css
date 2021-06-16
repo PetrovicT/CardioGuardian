@@ -56,17 +56,21 @@ body {
   left: 100%; 
   top: 50%; 
   bottom: auto;
-  margin: -2.5em 0 0 5em;}
+  margin: -2.5em 0 0 5em;
+}
+
 #q-graph thead th {
   width: 7.5em; 
   height: auto; 
   padding: 0.5em 1em;
 }
+
 #q-graph thead th.sent {
   top: 0; 
   left: 0; 
   line-height: 2;
 }
+
 #q-graph thead th.paid {
   top: 2.75em; 
   line-height: 2;
@@ -82,11 +86,13 @@ body {
 #q-graph #q1 {
   left: 0;
 }
+
 #q-graph #q2 {left: 150px;}
 #q-graph #q3 {left: 300px;}
 #q-graph #q4 {left: 450px; border-right: none;}
 #q-graph tbody th {bottom: -1.75em; vertical-align: top;
 font-weight: normal; color: #333;}
+
 #q-graph .bar {
   width: 60px; 
   border: 1px solid; 
@@ -108,7 +114,6 @@ font-weight: normal; color: #333;}
   background-color: #EA4C3D;
   border-color: transparent;
 }
-
 
 #ticks {
   position: relative; 

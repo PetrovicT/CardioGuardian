@@ -61,6 +61,12 @@ require 'resources/header.php';
                     <a href="<?= site_url("$controller/trenutnoStanje") ?>" class="w3-bar-item w3-button w3-red letters dugme">Prikaz trenutnog stanja</a>
                 </div>
                 
+                <br> <br>
+                <div class=" w3-center">
+                <div class="overlay slovaJakoCrvena" style="font-size: 28px;"> Unos ostalih podataka, koji su bitni za Vaše zdravlje: </div>
+                    <a href="<?= site_url("$controller/ostaliPodaci") ?>" class="w3-bar-item w3-button w3-red letters dugme">Unos podataka</a>
+                </div>
+                <br>
 
 
             </div>
