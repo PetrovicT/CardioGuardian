@@ -11,11 +11,8 @@ class GradModel extends Model
         // Vraća sortiranu listu gradova
         public function findAllAlphabetical(){
             $queryBuilder = $this->db->table($this->table);
-            
             $queryBuilder->orderBy('naziv','ASC');
-            
             $gradoviSorted = $queryBuilder->get();
-            
             return $gradoviSorted->getResult();
         }
 

@@ -9,8 +9,6 @@ class PolModel extends Model
         protected $returnType = 'object';
 
         protected $useAutoIncrement = true;
-
-        // Ništa, nema menjanja, osim iz PhpMyAdmina
         protected $allowedFields = [];
 
         // vraca string pol ciji id prosledimo

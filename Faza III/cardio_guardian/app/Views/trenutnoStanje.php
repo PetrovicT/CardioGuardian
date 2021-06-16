@@ -26,15 +26,14 @@
         require 'resources/header.php';
         ?>
 
-
         <div class="w3-content" style="max-width:85%; padding-top: 0; ">
         <br><br> <br><br>
             <!-- POZADINA -->
-            <div class="w3-row w3-padding w3-border  crvenaPozadina"> 
+            <div class="w3-row w3-padding w3-border crvenaPozadina"> 
 
                 <!-- UNOSI -->
                 <div class="w3-col l12 s12" style="padding-left: 5%; padding-right: 5%;">
-                 
+            
                     <!-- UNOS -->
                     <br>
                     <hr>
@@ -46,110 +45,104 @@
                             ?>
                             <img src="<?php echo base_url(); ?>/photos/cardioguardian.png" alt="">
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <table class="table table-striped w3-border" style="width:100%">
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">&nbsp</td>
-                        <td id="1" class="w3-border podatakUTabeli slovaJakoCrvenaMala">Izmerena vrednost:</td>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Referentna vrednost:</td>
-                    </tr>
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Nivo holesterola:</td>
-                        <td id="2" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">212</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">200-250</td>
-                    </tr>
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Gornji pritisak:</td>
-                        <td id="3" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">147</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">120-240</td>
-                    </tr>  <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Donji pritisak:</td>
-                        <td id="4" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">86</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">70-120</td>
-                    </tr>
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Otkucaji srca:</td>
-                        <td id="5" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">139</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">70-135</td>
-                    </tr>
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Nivo glukoze:</td>
-                        <td id="6" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">381</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">110-320</td>
-                    </tr>
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Krvni pritisak pri mirovanju:</td>
-                        <td id="7" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">96</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">120-180</td>
-                    </tr>
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Nivo šećera tokom spavanja:</td>
-                        <td id="8" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">110</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">< 120</td>
-                    </tr>
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Rezultati elektrokardiograma:</td>
-                        <td id="9" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">1</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">0</td>
-                    </tr>
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Oldpeak:</td>
-                        <td id="10" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">3</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">2.5-3.5</td>
-                    </tr>
-                    <tr>
-                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">ST slope:</td>
-                        <td id="11" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">2</td>
-                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">1-2</td>
-                    </tr>
-            </table>
-        </div>
-    </div>
-</div>
-
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <table class="table table-striped w3-border" style="width:100%">
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">&nbsp</td>
+                                        <td id="1" class="w3-border podatakUTabeli slovaJakoCrvenaMala">Izmerena vrednost:</td>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Referentna vrednost:</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Nivo holesterola:</td>
+                                        <td id="2" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">212</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">200-250</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Gornji pritisak:</td>
+                                        <td id="3" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">147</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">120-240</td>
+                                    </tr>  <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Donji pritisak:</td>
+                                        <td id="4" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">86</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">70-120</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Otkucaji srca:</td>
+                                        <td id="5" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">139</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">70-135</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Nivo glukoze:</td>
+                                        <td id="6" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">381</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">110-320</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Krvni pritisak pri mirovanju:</td>
+                                        <td id="7" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">96</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">120-180</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Nivo šećera tokom spavanja:</td>
+                                        <td id="8" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">110</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">< 120</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Rezultati elektrokardiograma:</td>
+                                        <td id="9" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">1</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">Oldpeak:</td>
+                                        <td id="10" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">3</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">2.5-3.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w3-border podatakUTabeli slovaJakoCrvenaMala">ST slope:</td>
+                                        <td id="11" class="w3-border podatakUTabeli slovaSlaboCrvenaMala">2</td>
+                                        <td class="w3-border podatakUTabeli slovaSlaboCrvenaMala">1-2</td>
+                                    </tr>
+                            </table>
+                        </div>
                     </div>
+                </div>
 
-                    </div>
+                </div>
 
-                    <div class="w3-container sivaPozadina w3-margin w3-padding-large w3-card-4 w3-center">
-                    <div class=" w3-center">
-               
-                    <button onclick="analizaVrednosti()" class="w3-bar-item w3-button w3-red letters dugme">Analiza izmerenih vrednosti</button>
-                    </div>
+                </div>
 
-                    <span id="span2" class=""></span>
-                    <span id="span3" class=""></span>
-                    <span id="span4" class=""></span>
-                    <span id="span5" class=""></span>
-                    <span id="span6" class=""></span>
-                    <span id="span7" class=""></span>
-                    <span id="span8" class=""></span>
-                    <span id="span9" class=""></span>
-                    <span id="span10" class=""></span>
-                    <span id="span11" class=""></span>
-                    </div>                    
-                  
-                    </div>
-                    </div>
-                    <hr>
-                    <br>   <br>    <br>
-    <!-- KRAJ UNOSI -->
-    </div>
-    
+                <div class="w3-container sivaPozadina w3-margin w3-padding-large w3-card-4 w3-center">
+                <div class=" w3-center">
+            
+                <button onclick="analizaVrednosti()" class="w3-bar-item w3-button w3-red letters dugme">Analiza izmerenih vrednosti</button>
+                </div>
 
-    <br>
-    <!-- KRAJ POZADINA -->
+                <span id="span2" class=""></span>
+                <span id="span3" class=""></span>
+                <span id="span4" class=""></span>
+                <span id="span5" class=""></span>
+                <span id="span6" class=""></span>
+                <span id="span7" class=""></span>
+                <span id="span8" class=""></span>
+                <span id="span9" class=""></span>
+                <span id="span10" class=""></span>
+                <span id="span11" class=""></span>
+                </div>                    
+                
+                </div> </div> <hr><br>   <br>    <br>
+            <!-- KRAJ UNOSI -->
+
+        </div>    <br>
+        <!-- KRAJ POZADINA -->
+
     </div>
     <br>
     <!-- KRAJ SADRZAJ -->
-    </div>
-    <br><br>
 
+    </div> <br><br>
     <?php
     require 'resources/footer.php';
     ?>
-    </body>
-
-    </html>
+</body>
+</html>

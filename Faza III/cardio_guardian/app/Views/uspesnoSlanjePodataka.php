@@ -17,41 +17,41 @@
         <script src = "<?php echo base_url(); ?>/js/script.js"></script>
         <script src = "<?php echo base_url(); ?>/js/modul1.js"></script>
         <style>
-.slidecontainer {
-  width: 100%;
-}
+          .slidecontainer {
+            width: 100%;
+          }
 
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 5px;
-  background: #EBEBEB;
-  outline: none;
+          .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 5px;
+            background: #EBEBEB;
+            outline: none;
 
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+          }
 
-.slider:hover {
-  opacity: 1;
-}
+          .slider:hover {
+            opacity: 1;
+          }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  background: #EBEBEB;
-  cursor: pointer;
-}
+          .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: #EBEBEB;
+            cursor: pointer;
+          }
 
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #EBEBEB;
-  cursor: pointer;
-}
-</style>
+          .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #EBEBEB;
+            cursor: pointer;
+          }
+        </style>
     </head>
 
     <body class="w3-light-grey">
@@ -61,30 +61,15 @@
         require 'resources/header.php';
         ?>
 
-        <!-- Registracija -->
         <div class="logovanje padding">
             <br> 
             <div class="wrapper SlaboCrvenaPozadina regBox">
-                <div class="Naslov"><b>Unos podataka</b></div>
-<br>
-                <div class="belaSlova  w3-center bela_velika_slova">Uspešno ste uneli sve podatke!</div>
-                <br>
-                <div class="belaSlova  w3-center bela_velika_slova">Za povratak na početnu stranu kliknite <a href="<?= site_url() ?>" class="belaSlova">ovde</a></div>
-                
-           
-
-                <div class="form-container">
-                    <div class="form-inner">
-                  
-                    </div>
-                </div>
+                <div class="Naslov"><b>Unos podataka</b></div><br>
+                <div class="belaSlova w3-center bela_velika_slova">Uspešno ste uneli sve podatke!</div><br>
+                <div class="belaSlova w3-center bela_velika_slova">Za povratak na početnu stranu kliknite <a href="<?= site_url() ?>" class="belaSlova">ovde</a></div>
             </div>
-
-
         </div>
-        <!-- Registracija -->
-
-
+  
         <!-- Footer -->
         <?php
         require 'resources/footer.php';

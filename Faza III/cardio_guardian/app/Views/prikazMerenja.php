@@ -26,11 +26,10 @@
         require 'resources/header.php';
         ?>
 
-
         <div class="w3-content w3-center" style="max-width:85%; padding-top: 0; ">
         <br><br> <br><br>
             <!-- POZADINA -->
-            <div class="w3-row w3-center w3-padding w3-border sky crvenaPozadina"> 
+            <div class="w3-row w3-center w3-padding w3-border crvenaPozadina"> 
 
                 <!-- UNOSI -->
                 <div class="w3-col l12 s12 w3-center" style="padding-left: 5%; padding-right: 5%;">
@@ -39,21 +38,19 @@
                     <br>
                     <hr>
                     <div class="w3-container w3-center sivaPozadina w3-margin w3-padding-large w3-card-4">
-                        <div class="w3-center letters_dark_blue" style="font-size: 30px;">  
+                        <div class="w3-center" style="font-size: 30px;">  
                             <?php
                             //dohvatanje controllera
                             $controller=session()->get('controller');
                             ?>
                             <div>
                               <h2 class="slovaJakoCrvena">Prikaz poslednjih 10 očitavanja parametara</h2>
-                              
                             </div>
-                           
                         </div>
                         </div>
+
       <div class="w3-container w3-center sivaPozadina w3-margin w3-padding-large w3-card-4">
-      <div>
-        <br>
+      <div> <br>
       <canvas class="w3-center graf" id="myChart" style="width:100%;"></canvas>
 
       <script>
@@ -114,24 +111,20 @@
         }
         });
       </script>
-      </div>
-      <br> <br>
+      </div> <br> <br>
       </div>
 
       <div class="w3-container w3-center sivaPozadina w3-margin w3-padding-large w3-card-4">
-        <div>
-        <br>
-        <canvas class="w3-center graf" id="myChart2" style="width:60%;"></canvas>
-<br>
+        <div>   <br>
+        <canvas class="w3-center graf" id="myChart2" style="width:60%;"></canvas>   <br>
         <script>
           var xValues = [1,2,3,4,5,6,7,8,9,10];
-
           new Chart("myChart2", {
           type: "line",
           data: {
           labels: xValues,
           datasets: [
-        { 
+          { 
           data: [0,0,0,1,2,1,1,0,1,1],
           borderColor: "red",
           fill: false,
@@ -158,22 +151,17 @@
           });
         </script>
         </div>
+         
+        </div>
+        <hr> <br> <br> <br>
+        <!-- KRAJ UNOSI -->
 
+      </div>     <br>
+      <!-- KRAJ POZADINA -->
 
-                     
-    </div>
-    <hr>
-    <br>   <br>    <br>
-    <!-- KRAJ UNOSI -->
-    </div>
-    
-    <br>
-    <!-- KRAJ POZADINA -->
-    </div>
-    <br>
+    </div>    <br>
     <!-- KRAJ SADRZAJ -->
-    </div>
-    <br><br>
+    </div> <br><br>
 
     <?php
     require 'resources/footer.php';

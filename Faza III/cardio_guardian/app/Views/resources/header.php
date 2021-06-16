@@ -9,6 +9,7 @@ $korisnikModel = new KorisnikModel();
 if($controller){
     require_once 'header_'.$controller.'.php';
 }
+
 else{
     require_once 'header_Gost.php';
 }

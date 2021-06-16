@@ -20,7 +20,6 @@
             .slidecontainer {
             width: 100%;
             }
-
             .slider {
             -webkit-appearance: none;
             width: 100%;
@@ -30,11 +29,9 @@
             -webkit-transition: .2s;
             transition: opacity .2s;
             }
-
             .slider:hover {
             opacity: 1;
             }
-
             .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
@@ -43,7 +40,6 @@
             background: #EBEBEB;
             cursor: pointer;
             }
-
             .slider::-moz-range-thumb {
             width: 25px;
             height: 25px;
@@ -75,7 +71,7 @@
                             </div> 
                             <div class="w3-center">
                             <br>
-                            <div class="belaSlova  w3-center bela_velika_slova">Unesite jačinu bola u grudima koji osećate dok trenirate.</div>
+                            <div class="belaSlova w3-center bela_velika_slova">Unesite jačinu bola u grudima koji osećate dok trenirate.</div>
                             <input type="range" min="1" max="4" value="1" class="slider" id="myRange" oninput="this.nextElementSibling.value = this.value">
                             <output class="belaSlova w3-center">1</output>
                   
@@ -106,8 +102,7 @@
                            </div>
                            <br>
 
-                           <div class="w3-center">
-                        
+                           <div class="w3-center">                        
                            <div class="belaSlova w3-center bela_velika_slova">Unesite informaciju da li imate dijabetes. </div>
                            <input type="radio" id="Nemam" name="dijabetes" value="0" checked>
                             <label class="belaSlova" for="Nemam">Nemam</label>
@@ -115,10 +110,10 @@
                             <label class="belaSlova" for="Imam">Imam</label>
                            </div>
 
-<br>
+                            <br>
                             <div class="field">
                             <div class="belaSlova  w3-center ">Unesite vrednost BMI (Body Mass Index). Ako ne znate Vaš BMI, molimo Vas da odete na Modul 3 i tamo dobijete tu informaciju.</div>
-                                <input class="sivaPozadina w3-center" name = "email" type="text" placeholder="BMI" required>
+                                <input class="sivaPozadina w3-center" name = "BMI" type="text" placeholder="BMI" required>
                             </div> 
 
                             <br>
@@ -138,15 +133,12 @@
                             <div class="field">
                                 <input type="submit" value="Unesi podatke">
                             </div>
-                           
                         </form>
                     </div>
                 </div>
             </div>
 
         </div>
-        <!-- Registracija -->
-
 
         <!-- Footer -->
         <?php

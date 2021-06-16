@@ -56,6 +56,10 @@ for (let i=2; i<12; i++){
 }
 }
 
+function updateTextInput(val) {
+    document.getElementById('textInput').value=val; 
+}
+
 function analizaVrednosti(){
 
     let broj=document.getElementById("2").innerHTML;
@@ -241,7 +245,3 @@ function analizaTekst(tekst,id,boja){
     if (boja==2) document.getElementById("span"+id).classList.add("slovaLoseMala");
     document.getElementById("span"+id).innerHTML="<br>"+tekst;
 }
-
-function updateTextInput(val) {
-    document.getElementById('textInput').value=val; 
-  }

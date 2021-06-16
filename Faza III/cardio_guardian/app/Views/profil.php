@@ -38,7 +38,6 @@
         use App\Models\PolModel;
         use App\Models\GradModel;
         use App\Models\TipKorisnikaModel;
-        use App\Models\KorisnikOcenioPsihologaModel;
         ?>
         <div>
             <!-- Profil-->
@@ -74,17 +73,9 @@
             $tipKorisnikaModel = new TipKorisnikaModel();
             $kategorija = $tipKorisnikaModel->find($idKategorije)->tip;
 
-            echo '
-
- 
-        <br> <br>  
-
-        
-        
+            echo ' <br> <br>          
             
         <div class="w3-row w3-center picture crvenaPozadina">
-   
-
             <div class="w3-col s12"> 
             <div class="w3-center w3-text-white">';
             if ($korisnik->slika == null) {
@@ -94,21 +85,16 @@
             } else
                 echo '<img src="data:image/jpeg;base64,' . base64_encode($korisnik->slika) . '">';
 
-            echo '</div>
+            echo 
+                '</div>
                     </div>
-                  
-                
-
                 <div class="w3-row w3-center">
                     <div class="w3-col s12"> 
                     <br>
                         <div class="w3-center w3-text-white velika_slova"> ' . "$username" . '</div>
-              
                     </div>
                 </div>
-                
-       
-                           
+                 
                 <hr>
                 <div class="w3-row w3-center">
                     <div class="w3-col s12"> 
@@ -117,6 +103,7 @@
                     </div>  
                 </div>  
                <hr>
+
                 <div class="w3-row" >
                     <div class="w3-col s12"> 
                         <div class="slovaVelika">Grad: </div>
@@ -124,56 +111,25 @@
                     </div>
                 </div>
                 <hr>
+
                 <div class="w3-row"">
                     <div class="slovaVelika">Email adresa: </div>
                     <div class="slovaMala">' . "$email" . '</div>
                 </div>
                 <hr>
+
                 <div class="w3-row">
                     <div class="slovaVelika ">Pol: </div>
                     <div class="slovaMala ">' . "$pol" . '</div>
                 </div>
-               
-               
-                
                 <br>
-
-            </div>
-            ';
-            if ($kategorija == "Psiholog") {
-                $korisnikOcenioPsihologaModel = new KorisnikOcenioPsihologaModel();
-                $likes = $korisnikOcenioPsihologaModel->findNumOfLikes($korisnik->idKorisnik);
-                $dislikes = $korisnikOcenioPsihologaModel->findNumOfDislikes(($korisnik->idKorisnik));
-                $disabledProperty = session()->get('controller') == 'Gost' ? "disabled" : "";
-
-                echo '
-                    <br> 
-
-                    <div class="w3-row w3-center picture">
-                        <div class="slovaVelika ">Pregled dosadašnjih ocena psihologa ' . "$username" . ': </div> <br>
-
-                            <div class="w3-center">
-                                
-                                <button ' . $disabledProperty . ' class="w3-button dugmeOceniPsihologa w3-center" onclick="like_or_dislike_psiholog(this,' . $korisnik->idKorisnik . ',1)"><i class="fa fa-thumbs-up"></i> <u onclick="" style="text-decoration: none; font-weight: normal;">Pozitivna ocena (' . "$likes" . ')</u></button> &nbsp
-                                
-                                <button ' . $disabledProperty . ' class="w3-button dugmeOceniPsihologa w3-center" onclick="like_or_dislike_psiholog(this,' . $korisnik->idKorisnik . ',0)"><i class="fa fa-thumbs-down"></i> <u onclick="" style="text-decoration: none; font-weight: normal;">Negativna ocena (' . "$dislikes" . ')</u></button>
-                            </div>
-                            <br> <br>
-                    </div>
-                    <br> 
-                ';
-            }
-            echo '
-            <br>
-        <br>
-        <br>
-        '; // kraj echo
+            </div>  <br> <br>   <br>
+            ';          
             ?> 
 
+    <?php
+    require 'resources/footer.php';
+    ?>
 
-<?php
-require 'resources/footer.php';
-?>
-
-            </body>
-            </html>
+    </body>
+    </html>

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Controllers;
-
 use App\Models\KorisnikModel;
 
 class Standard extends BaseController {
@@ -42,6 +41,4 @@ class Standard extends BaseController {
     public function dataSubmit() {
         echo view("uspesnoSlanjePodataka.php");
     }
-
-
 }

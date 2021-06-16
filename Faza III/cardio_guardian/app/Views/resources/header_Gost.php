@@ -1,4 +1,3 @@
-<!-- Header -->
 
 <header class="w3-bar w3-padding-12 w3-mobile" style="background-color:rgb(216, 57, 43)">
     <!-- S leva nadesno -->

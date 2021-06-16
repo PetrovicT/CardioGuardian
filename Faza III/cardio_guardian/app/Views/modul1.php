@@ -30,19 +30,17 @@ require 'resources/header.php';
 <div class="w3-content" style="max-width:85%; padding-top: 0; ">
 <br><br> <br><br>
     <!-- POZADINA -->
-    <div class="w3-row w3-padding w3-border sky crvenaPozadina"> 
+    <div class="w3-row w3-padding w3-border crvenaPozadina"> 
 
         <!-- UNOSI -->
         <div class="w3-col l12 s12" style="padding-left: 5%; padding-right: 5%;">
          
             <!-- UNOS -->
-            <br>
-            <hr>
+            <br> <hr>
             <div class="w3-container sivaPozadina w3-margin w3-padding-large w3-card-4">
-                <div class="w3-center letters_dark_blue" style="font-size: 30px;">  
+                <div class="w3-center" style="font-size: 30px;">  
                     <?php
                     //dohvatanje controllera
-
                     $controller=session()->get('controller');
                     ?>
                    
@@ -68,21 +66,17 @@ require 'resources/header.php';
                 </div>
                 <br>
 
-
             </div>
             <hr>
             <br>   <br>    <br>
-<!-- KRAJ UNOSI -->
-</div>
+        <!-- KRAJ UNOSI -->
+        </div> <br>
 
+    <!-- KRAJ POZADINA -->
+    </div> <br>
 
-<br>
-<!-- KRAJ POZADINA -->
-</div>
-<br>
 <!-- KRAJ SADRZAJ -->
-</div>
-<br><br>
+</div> <br><br>
 
 <?php
 require 'resources/footer.php';

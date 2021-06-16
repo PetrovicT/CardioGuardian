@@ -28,8 +28,7 @@
         <div class="logovanje">
             <br> 
             <div class="wrapper SlaboCrvenaPozadina regBox">
-                <div class="Naslov"><b>Formular za registrovanje</b></div>
-<br>
+                <div class="Naslov"><b>Formular za registrovanje</b></div> <br>
                 <div class="belaSlova ">Sledeca polja su obavezna, molimo Vas da ih popunite. Obratite paznju da Vasa sifra mora sadrzati minimum 6 karaktera.</div>
 
                 <font color='white'>
@@ -67,13 +66,8 @@
                                     foreach ($sviGradovi as $grad) {
                                         echo '<option value="' . $grad->idGrad . '">' . $grad->naziv . '</option>';
                                     }
-
-                        
                                     ?>
                                 </select>
-
-
-
                             </div> 
                             <div class="field">
                                 <input class="sivaPozadina" name = "email" type="email" placeholder="Email adresa" >
@@ -89,13 +83,13 @@
                                 echo '<label class="belaSlova" for="' . $pol->pol . '"> ' . $pol->pol . '</label><br>';
                             }
                             ?>
+
                             <input type="radio" id="Drugo" name="gender" value="" checked>
                             <label class="belaSlova " for="Drugo">Drugo/Neizjašnjen</label>
                             <div class="field">
                                 <input type="submit" value="Registrujte se">
                             </div>
                             <div class="singup-link belaSlova">
-                                
                                 Vec imate korisnicki nalog? <a href="<?php echo base_url(); ?>/Gost/login"><b>Ulogujte se</b></a>
                             </div>
                         </form>
@@ -105,7 +99,6 @@
 
         </div>
         <!-- Registracija -->
-
 
         <!-- Footer -->
         <?php
