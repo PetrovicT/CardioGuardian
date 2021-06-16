@@ -112,9 +112,6 @@ background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, 
     background-color: rgba(238, 208, 109, 0.904);
 }
 
-.dobro {
-    background-color: rgb(118, 202, 92);
-}
 
 .fantasticno {
     background-color: rgb(94, 200, 138);
@@ -122,4 +119,17 @@ background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, 
 
 .belaSlova {
     color: white;
+}
+
+.slovaLoseMala {
+    color:rgba(238, 187, 20, 0.904);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.slovaJakoCrvenaMini{
+    color:#EA4C3D;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: justify;
 }

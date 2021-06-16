@@ -109,18 +109,28 @@
     </div>
 </div>
 
-     
+                    </div>
 
                     </div>
 
-
-
-                    </div>
-
-                    <div class="w3-container sivaPozadina w3-margin w3-padding-large w3-card-4">
+                    <div class="w3-container sivaPozadina w3-margin w3-padding-large w3-card-4 w3-center">
                     <div class=" w3-center">
-                    
+               
                     <button onclick="analizaVrednosti()" class="w3-bar-item w3-button w3-red letters dugme">Analiza izmerenih vrednosti</button>
+                    </div>
+
+                    <span id="span2" class=""></span>
+                    <span id="span3" class=""></span>
+                    <span id="span4" class=""></span>
+                    <span id="span5" class=""></span>
+                    <span id="span6" class=""></span>
+                    <span id="span7" class=""></span>
+                    <span id="span8" class=""></span>
+                    <span id="span9" class=""></span>
+                    <span id="span10" class=""></span>
+                    <span id="span11" class=""></span>
+                    </div>                    
+                  
                     </div>
                     </div>
                     <hr>
