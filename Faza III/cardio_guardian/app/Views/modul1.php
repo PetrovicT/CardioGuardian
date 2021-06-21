@@ -28,7 +28,7 @@ require 'resources/header.php';
 
 
 <div class="w3-content" style="max-width:85%; padding-top: 0; ">
-<br><br> <br><br>
+<br><br> <br>
     <!-- POZADINA -->
     <div class="w3-row w3-padding w3-border crvenaPozadina"> 
 

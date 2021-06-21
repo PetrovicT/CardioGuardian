@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/stil.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/logovanje.css">
         <style>h1,h2,h3,h4,h5,h6 {font-family: "Oswald"} body {font-family: "Open Sans"}</style>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src = "<?php echo base_url(); ?>/js/script.js"></script>
         <script src = "<?php echo base_url(); ?>/js/modul1.js"></script>
         <style>

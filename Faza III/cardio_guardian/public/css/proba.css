@@ -9,19 +9,43 @@
 
 .podnaslovi{
     color:rgba(234,76,61,1);
+    text-align: justify;
+    font-size: 15px;
+    padding: 10px;
 }
 
 .slovca{
     color: rgba(220,41,24,1);
+    font-size: 17px;
 }
 .potparagraf{
-    font-size: smaller;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+
+}
+.dugme_crveno{
+        border-width: 2px !important;
+        border-color: #EA4C3D !important;
+        display: inline-block;
+        border-radius: 3px;
+        vertical-align: middle;
+        text-decoration: none;
+        color: inherit !important;
+        background-color: inherit !important;
+        text-align: center;
+        cursor: pointer;
+      
+}
+
+.dugme_crveno:hover {
+    background-color: #EA4C3D !important;
+    color: white !important;
 }
 
 .pocetni{
     font-family: 'Times New Roman', Times, serif;
-    text-align: center;
+    text-align: justify;
 }
 
 .header-deo{
@@ -37,16 +61,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 650px;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 0;
 }
 .wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
 }
 .card {
     width: 400px;
-    height: 450px;
+    height: 550px;
     margin: 1em;
     perspective: 1500px;
 }
@@ -190,6 +217,8 @@ body {
   background:rgba(234,76,61,1);
 }
 
+
+
 .kalendar {
   font:18px 'Roboto'; 
   font-weight:700; 
@@ -208,8 +237,8 @@ body {
   text-align:center; 
   width:42px; 
   height:42px; 
-  display:inline-block; 
-  float:left; 
+
+  float: left; 
   overflow:hidden; 
   line-height:40px;
 }

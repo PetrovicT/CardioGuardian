@@ -105,7 +105,7 @@ class Gost extends BaseController
             // A ovo koristimo da uslovno učitavamo stvari
             $this->session->set('controller', $korisnikModel->findUserType($insertedId));
 
-            return redirect()->to(site_url('Korisnik/'));
+            return redirect()->to(site_url('Standard/'));
         }
         else{
             return $this->register($korisnikModel->errors());

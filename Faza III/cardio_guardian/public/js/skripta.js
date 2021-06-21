@@ -182,19 +182,19 @@ function zapocniJogu(){
 
 function ispisiSlikuJoga(){
     if(i==1){
-    document.getElementById("joga").innerHTML = "<img src='1.png'>";
+    document.getElementById("joga").innerHTML = "<img src='/photos/1.png'>";
     }
     if(i==2){
-        document.getElementById("joga").innerHTML = "<img src='2.png'>";
+        document.getElementById("joga").innerHTML = "<img src='/photos/2.png'>";
         }
         if(i==3){
-            document.getElementById("joga").innerHTML = "<img src='3.png'>";
+            document.getElementById("joga").innerHTML = "<img src='/photos/3.png'>";
             }
             if(i==4){
-                document.getElementById("joga").innerHTML = "<img src='4.png'>";
+                document.getElementById("joga").innerHTML = "<img src='/photos/4.png'>";
                 }
                 if(i==5){
-                    document.getElementById("joga").innerHTML= "<img src='5.png'>";
+                    document.getElementById("joga").innerHTML= "<img src='/photos/5.png'>";
                 }
                 if(i==6){
                     document.getElementById("joga").innerHTML= "VAS TRENING JE GOTOV!!!Čestitamo!";
@@ -222,16 +222,16 @@ function zapocniVezbeSnage(){
 
 function ispisiSlikuVezbeSnage(){
     if(i2==1){
-    document.getElementById("vezbeSnage").innerHTML = "Jump squats<br></br><img src='v1.png'>";
+    document.getElementById("vezbeSnage").innerHTML = "Jump squats<br></br><img src='/photos/v1.png'>";
     }
     if(i2==2){
-        document.getElementById("vezbeSnage").innerHTML = "Push-ups<br></br><img src='v2.png'>";
+        document.getElementById("vezbeSnage").innerHTML = "Push-ups<br></br><img src='/photos/v2.png'>";
         }
         if(i2==3){
-            document.getElementById("vezbeSnage").innerHTML = "Jumping lunges<br></br><img src='v3.png'>";
+            document.getElementById("vezbeSnage").innerHTML = "Jumping lunges<br></br><img src='/photos/v3.png'>";
             }
             if(i2==4){
-                document.getElementById("vezbeSnage").innerHTML = "Punches<br></br><img src='v4.png'>";
+                document.getElementById("vezbeSnage").innerHTML = "Punches<br></br><img src='/photos/v4.png'>";
                 }
                 if(i2==5){
                     document.getElementById("vezbeSnage").innerHTML= "VAS TRENING JE GOTOV!!!Čestitamo!";
@@ -260,16 +260,16 @@ function zapocniHIIT(){
 
 function ispisiSlikuHIIT(){
     if(i3==1){
-    document.getElementById("HIIT").innerHTML = "<img src='HIIT1.png'>";
+    document.getElementById("HIIT").innerHTML = "<img src='/photos/HIIT1.png'>";
     }
     if(i3==2){
-        document.getElementById("HIIT").innerHTML = "<img src='HIIT2.png'>";
+        document.getElementById("HIIT").innerHTML = "<img src='/photos/HIIT2.png'>";
         }
         if(i3==3){
-            document.getElementById("HIIT").innerHTML = "<img src='HIIT3.png'>";
+            document.getElementById("HIIT").innerHTML = "<img src='/photos/HIIT3.png'>";
             }
             if(i3==4){
-                    document.getElementById("HIIT").innerHTML= "<img src='HIIT5.png'>";
+                    document.getElementById("HIIT").innerHTML= "<img src='/photos/HIIT5.png'>";
                 }
                 if(i3==5){
                     document.getElementById("HIIT").innerHTML= "VAS TRENING JE GOTOV!!!Čestitamo!";

@@ -99,7 +99,7 @@ background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, 
 }
 
 .slovaJakoCrvenaMala{
-    color:#EA4C3D;
+    color:#EA4C3D !important;
     font-size: 24px;
     font-weight: bold;
 }
@@ -127,7 +127,7 @@ background: linear-gradient(90deg, rgba(220,41,24,1) 0%, rgba(234,76,61,1) 65%, 
 }
 
 .slovaJakoCrvenaMini{
-    color:#EA4C3D;
+    color:#EA4C3D !important;
     font-size: 20px;
     font-weight: bold;
     text-align: justify;

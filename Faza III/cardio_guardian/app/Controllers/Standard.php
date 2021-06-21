@@ -16,12 +16,12 @@ class Standard extends BaseController {
 
     // trening
     public function modul2() {
-        echo view("modul2.html");
+        echo view("modul2.php");
     }
 
     // ishrana
     public function modul3() {
-        echo view("modul3.html");
+        echo view("modul3.php");
     }
 
     public function prikazMerenja(){

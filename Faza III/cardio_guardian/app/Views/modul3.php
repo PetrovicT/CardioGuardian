@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='proba.css'>
-    <link rel='stylesheet' href='stil.css'>
+    <link rel="icon" href="/photos/cardioguardian.png">
+    <link rel='stylesheet' href='/css/proba.css'>
+    <link rel='stylesheet' href='/css/w3.css'>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/css/pocetna.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/css/stil.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="skripta.js"></script>
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="/js/skripta.js"></script>
+    <title>Modul za ishranu</title>
 </head>
+
+
 <body class="body">
+
+<!-- Header -->
+<?php
+require 'resources/header.php';
+?>
+
+<div class="w3-content" style="max-width:85%; padding-top: 0; ">
+    <div class="w3-row w3-padding w3-border crvenaPozadina"> 
+    <div class="w3-col l12 s12" style="padding-left: 5%; padding-right: 5%;">
+    <div class="w3-container sivaPozadina w3-margin w3-padding-large w3-card-4">
+    <div class="w3-center" style="font-size: 30px;">  
+                <?php
+                //dohvatanje controllera
+                $controller=session()->get('controller');
+                ?>
+                <img src="<?php echo base_url(); ?>/photos/cardioguardian.png" alt="">
+        </div>
        <div class="pocetni slovca">
        Dobrošli na stranicu koja se bavi ishranom! Milioni ljudi jedu više nego što je telu potrebno. 
        Ako se u stomak unese više hrane no što organizam zahteva, makar ona bila jednostavnog sastava, 
@@ -22,11 +50,16 @@
        Učimo se da budemo zadovoljni čistom, jednostavnom hranom, pripremljenom na jednostavan način.
        To treba da postane naš način ishrane. Obilna hrana uništava zdrave organe tela, a najviše um.
        Moramo voditi brigu o organima za varenje kako ih ne bismo mučili preteranom raznovrsnošću hrane.
-       Oni imaju veliku ulogu u izgradnji srećnog života.<br></br></div>
-       <div class="potparagraf slovca">
+       Oni imaju veliku ulogu u izgradnji srećnog života.<br></br>
+     
        Ovaj deo aplikacije osmišljen je tako da Vam pokaže u kom stanju se trenutno nalazi Vaše
        telo i na koje načine možete poboljšati Vaše zdravlje. Uz pomoć naših preciznih kalkulatora
        možete u potpunosti isplanirati savršenu ishranu i na taj način učiniti sebi veliku uslugu.<b> Pa da počnemo!</b><br></br>
+       </div>
+</div>
+
+       <div class="w3-container sivaPozadina w3-margin w3-padding-large w3-card-4">
+       <div class="potparagraf slovca">
        <b class="podnaslovi">1. Kalkulator kalorija BMR</b> - Bazalni metabolizam (BMR) je količina energije koja je potrebna čoveku za "redovno" 
        življenje (održavanje osnovnih telesnih funkcija bez dodatnog napora). Pod osnovnim telesnim funkcijama podrazumevamo sedenje,
        spavanje, bez nekih napora čak i kretanja. Ovaj broj biće nam neophodan, kako bismo uspešno odredili TDEE <i>(u nastavku teksta)</i>.<br></br>
@@ -44,6 +77,12 @@
        <br></br>
        <b class="podnaslovi">5.Primeri zdravih recepata</b>  - U ovom odeljku možete na dnevnom nivou videti interesantne i zdrave recepte za svaki od obroka, doručak, ručak i večeru.
     </div>
+
+    </div>
+</div>
+</div>
+</div>
+
     <div class='body-kartice'>
     <div class="wrapper">
         <div class="card">
@@ -62,11 +101,12 @@
                         Za precizno računanje kalorija potrebno je da u obavezna polja uneseš lične podatke u koje spadaju: težina, visina, godine starosti i pol.
                         Ova vrednost je količina kalorija koju biste potrošili ako samo ležite i odmarate. Ako želite izračunati koliko vam ukupno treba kalorija dnevno 
                         pri određenoj aktivnosti, onda možete iskoristiti kalkulator za izračunavanje ukupne dnevne potrošnje energije koji se još i naziva TDEE.</div>
+                        <br>
                         <form name="KALORIJEforma">
                         <table>
     
                             <tr>
-                                <td>Težina u kilogramima:</td>
+                                <td>Težina (kg):</td>
                                 <td><input type='text' name="tezinaK"></td>
                             </tr>
                             <tr>
@@ -82,10 +122,11 @@
                                 <td><input type="radio" name="pol" id="muski">Muški <input type="radio" name="pol" id="zenski">Ženski</td>
                             </tr>
                             <tr>
-                                <td><input type="button" value="Izračunaj kalorije" onClick="izracunajKalorije()"></td>
-                                <td><input type="text" name="kalorijeIspis" placeholder="Vaš broj preporučenih kalorija" size="20"></td>
+                                <td><br><input type="button" class="dugme_crveno" value="Izračunaj kalorije" onClick="izracunajKalorije()"></td>
+                                <td><br><input type="text" name="kalorijeIspis" class="" placeholder="Vaš broj preporučenih kalorija" size="20"></td>
                             </tr>          
                         </table>
+                        <br>
                     </form>
                         <label for="card1" class="button return" aria-hidden="true">
                             <i class="fas fa-arrow-left">Klikni za povratak</i>
@@ -109,7 +150,7 @@
                     <div>
                         Indeks telesne mase (BMI) nam pokazuje odnos između težine i visine našeg tela. BMI tabela pokazuje različite kategorije telesne težine prema 
                         godinama života.Na osnovu Vaše trenutne telesne kondicije ili zdravstvenog stanja može se desiti da je neophodno da smanjite ili povećate težinu.
-                         Ako su Vaše vrednosti daleko ispod ili iznad proseka, svakako morate otići kod svog lekara, kako biste smanjili rizik za Vaše zdravlje.
+                         Ako su Vaše vrednosti daleko ispod ili iznad proseka, svakako morate otići kod svog lekara.
                     </div>
                     <table class="table-striped thead-light">
                         <tr class='header-deo'>
@@ -254,15 +295,18 @@
                         </tr>
                     </table>
                     <div>
+                        <br>
                         <form name="BMIforma">
                     <table>
                        <tr><input type="text" name="tezina" placeholder="Unesi težinu (kg)" size="20"></tr>
-                       <tr><input type="text" name="visina" placeholder="Unesi visinu (m)" size="20"></tr>
-                        <tr><input type="button" value="Izračunaj BMI" onClick="izracunajBmi()"></tr>
-                        <tr><input type="text" name="bmi" placeholder="Vaš BMI" size="20"></tr>
+                       <tr><input type="text" name="visina" placeholder="Unesi visinu (m)" size="20"></tr>  <br>
+                       <tr> <br>&nbsp</tr> 
+                        <tr> <input type="button" class="dugme_crveno" value="Izračunaj BMI" onClick="izracunajBmi()"></tr>  
+                        <tr> <input type="text" name="bmi" placeholder="Vaš BMI" size="20"></tr>
                     </table>
                         </form>
                         </div>
+                        <br>
                         <label for="card2" class="button return" aria-hidden="true">
                             <i class="fas fa-arrow-left">Klikni za povratak</i>
                         </label>
@@ -284,28 +328,30 @@
                     <div class="pocetniParagraf podnaslovi">
                     
                        TDEE kalkulator je kalkulator ukupne dnevne potrošnje energije. Za izračun ukupne dnevne potrošnje energije
-                        Vam je potrebna BMR vrednost iz prvog kalkulatora i informacija o količini Vaše aktivnosti.
+                        Vam je potrebna BMR vrednost iz prvog kalkulatora i informacija o količini Vaše aktivnosti. 
+                        <br>
                        
                         <form name="TDEEforma">
                             <table>
-                                <tr><td>Unesite Vaš BMR</td>
+                                <tr><td><b>Unesite Vaš BMR</b></td>
                                     <td><input type="text" name="BMR"></td>
                                  </tr>
-                                <tr><td>Izaberite jednu od sledećih opcija:</td></tr>
-                                <tr><td><input type="radio" name="aktivnost" id="1">neaktivan</td></tr> 
-                                <tr><td><input type="radio" name="aktivnost" id="2">mala aktivnost, 1-3 puta nedeljno</td></tr> 
-                                <tr><td><input type="radio" name="aktivnost" id="3">srednja aktivnost, 3-5 puta nedeljno</td></tr> 
-                                <tr><td><input type="radio" name="aktivnost" id="4">velika aktivnost, 6-7 puta nedeljno</td></tr> 
-                                <tr><td><input type="radio" name="aktivnost" id="5">ogromna aktivnost, dva puta dnevno</td></tr> 
+                               
+                                <tr><td colspan="2"><b>Izaberite jednu od sledećih opcija:</b></td></tr>
+                                <tr><td colspan="2"><input type="radio" name="aktivnost" id="1"> neaktivan</td></tr> 
+                                <tr><td colspan="2"><input type="radio" name="aktivnost" id="2"> mala aktivnost, 1-3 puta nedeljno</td></tr> 
+                                <tr><td colspan="2"><input type="radio" name="aktivnost" id="3"> srednja aktivnost, 3-5 puta nedeljno</td></tr> 
+                                <tr><td colspan="2"><input type="radio" name="aktivnost" id="4"> velika aktivnost, 6-7 puta nedeljno</td></tr> 
+                                <tr><td colspan="2"><input type="radio" name="aktivnost" id="5"> ogromna aktivnost, dva puta dnevno</td></tr> <br>
                                 <tr>
-                                    <td><input type="button" value="Izračunaj TDEE" onClick="izracunajTDEE()"></td>
-                                    <td><input type="text" name="TDEEIspis" placeholder="Vaš TDEE" size="20"></td>
+                                    <td><br><input type="button" class="dugme_crveno" value="Izračunaj TDEE" onClick="izracunajTDEE()"></td>
+                                    <td><br><input type="text" name="TDEEIspis" placeholder="Vaš TDEE" size="20"></td>
                                 </tr>
                             </table>
                         </form>
                     </div>
-                        <label for="card3" class="button return" aria-hidden="true">
-                            <i class="fas fa-arrow-left">Klikni za povratak</i>
+                        <label for="card3" style="margin:10px" class="button return" aria-hidden="true">
+                            <i style="padding:10px" class="fas fa-arrow-left">Klikni za povratak</i>
                         </label>
             </div>
             </div>
@@ -329,24 +375,25 @@
                     <div class="back pocetniParagraf podnaslovi">
                         <div> 
                             Makronutrijenti imaju svoje specifične uloge i snabdevaju nas kalorijama i energijom. Ovde možete uz pomoć kalorija koje su Vam neophodne
-                            i Vaših ciljeva izračunati koliko kog makronutrijenata Vam je potrebno za normalno funkcionisanje.
+                            i Vaših ciljeva izračunati koliko kog makronutrijenata Vam je potrebno za  funkcionisanje.
                             Primeri zdravih masti: bademi, orasi, seme bundeve, masline, avokado.
-                            Dobri izvori proteina: pasulj, mahunarke, avokado, repa, jaja...
-                            Izvori ugljenih hidrata: jabuke, banane, karfiol, smeđi pirinač, proso, kvinoa, pasulj.</div>
+                            Dobri izvori proteina: pasulj, mahunarke, avokado...
+                            </div> 
                             <form name="MAKRONUTRIJENTIforma">       
                             <table>
-                                <tr><td>Unesite broj kalorija</td>
+                                <br>
+                                <tr><td><b>Unesite broj kalorija</b></td>
                                     <td><input type="text" name="kalorijeM"></td>
                                  </tr>
-                                <tr><td colspan="2">Izaberite cilj:</td></tr>
-                                <tr><td colspan="2"><input type="radio" name="masa" id="11">Maintenance (održavanje trenutne težine)</td></tr> 
-                                <tr><td colspan="2"><input type="radio" name="masa" id="12">Cutting (smanjivanje trenutne težine)</td></tr> 
-                                <tr><td colspan="2"><input type="radio" name="masa" id="13">Bulking (povećanje trenutne težine)</td></tr> 
-                                <tr><td colspan="2">Izaberite jednu od sledećih opcija:</td></tr>
+                                <tr><td colspan="2"><b>Izaberite cilj:</b></td></tr>
+                                <tr><td colspan="2"><input type="radio" name="masa" id="11"> Maintenance (održavanje trenutne težine)</td></tr> 
+                                <tr><td colspan="2"><input type="radio" name="masa" id="12"> Cutting (smanjivanje trenutne težine)</td></tr> 
+                                <tr><td colspan="2"><input type="radio" name="masa" id="13"> Bulking (povećanje trenutne težine)</td></tr> 
+                                <tr><td colspan="2"><b>Izaberite jednu od sledećih opcija:</b></td></tr>
                                 <tr><td ><input type="radio" name="opcija" id="14">Moderate Carb (30/35/35)</td></tr> 
                                 <tr><td><input type="radio" name="opcija" id="15">Lower Carb (40/40/20)</td></tr> 
                                 <tr><td><input type="radio" name="opcija" id="16">Higher Carb (30/20/50)</td></tr> 
-                               <tr><td><input type="button" value="Izračunaj makronutrijente" onClick="izracunajMakronutrijnte()"></td></tr>
+                               <tr><td><input type="button"  class="dugme_crveno" value="Izračunaj makronutrijente" onClick="izracunajMakronutrijnte()"></td></tr>
                                 <tr><td><input type="text" name="proteiniIspis" placeholder="Preporučeni broj proteina" size="20"></td><td>g proteina</td></tr>
                                 <tr><td><input type="text" name="mastiIspis" placeholder="Preporučeni broj masti" size="20"></td><td>g masti</td></tr>
                                 <tr><td><input type="text" name="ugljeniHidratiIspis" placeholder="Preporučeni broj ugljenih hidrata" size="20"></td><td>g ugljenih hidrata</td></tr>
@@ -374,16 +421,18 @@
                              tako da svaki dan možete spremati neku zanimljivu, ali i zdravu hranu, sve što je potrebno jeste da izaberete željeni obrok.
                             <form name="RECEPTIforma">   
                                 <table>
-                            <tr><td colspan="2">Izaberite koji obrok želite:</td></tr>
+                                    <br>
+                            <tr><td colspan="2"><b>Izaberite koji obrok želite:</b></td></tr>
                             <tr><td ><input type="radio" name="opcija" id="111">doručak</td>
                             <td><input type="radio" name="opcija" id="112">ručak</td> 
-                            <td><input type="radio" name="opcija" id="113">večera</td></tr> 
-                            <tr><td><input type="button" value="Ispiši recept" onClick="ispisiRecept()"></td></tr>
+                            <td><input type="radio" name="opcija" id="113">večera</td></tr>  
+                            <tr><td><br><input type="button"  class="dugme_crveno" value="Ispiši recept" onClick="ispisiRecept()"></td></tr>
                         </table>
-                        <textarea id="dorucak"  rows="4" cols="50"></textarea>
-                        <textarea id="rucak"  rows="4" cols="50"></textarea>
-                        <textarea id="vecera"  rows="4" cols="50"></textarea>
+                        <textarea id="dorucak"  rows="3" cols="48"></textarea>
+                        <textarea id="rucak"  rows="3" cols="48"></textarea>
+                        <textarea id="vecera"  rows="3" cols="48"></textarea>
                             </form>
+                            <br>
                             <label for="card5" class="button return" aria-hidden="true">
                                 <i class="fas fa-arrow-left">Klikni za povratak</i>
                             </label>
@@ -392,5 +441,7 @@
             </div>
             </div>
             </div>
+
+          
 </body>
 </html>
