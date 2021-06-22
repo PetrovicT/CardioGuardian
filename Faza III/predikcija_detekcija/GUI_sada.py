@@ -96,6 +96,8 @@ class CustomMainWindow(QMainWindow):
         self.label4 = QLabel("Godine:")
         self.LAYOUT_A.addWidget(self.label4, *(10, 5))
         self.godineVrednost = QSpinBox()
+        self.godineVrednost.setMaximum(200)
+        self.godineVrednost.setMinimum(1)
         self.LAYOUT_A.addWidget(self.godineVrednost, *(10, 10))
 
         self.label3 = QLabel("Pol:")
@@ -107,6 +109,8 @@ class CustomMainWindow(QMainWindow):
         self.label5 = QLabel("Koliko jak bol u grudima osecate (na skali od 1 do 4)?:")
         self.LAYOUT_A.addWidget(self.label5, *(20, 5))
         self.bolUGrudimaVrednost = QSpinBox()
+        self.bolUGrudimaVrednost.setMaximum(4)
+        self.bolUGrudimaVrednost.setMinimum(1)
         self.LAYOUT_A.addWidget(self.bolUGrudimaVrednost, *(20, 10))
 
         self.label6 = QLabel("Koliki Vam je krvni pritisak u mirovanju:")
@@ -114,12 +118,14 @@ class CustomMainWindow(QMainWindow):
         # zato je 5 leva kolona, a 10 desna, a 25 je na y osi, sto je manji broj to je pri vrhu
         self.krvniPritisakMirovanje = QSpinBox()
         self.krvniPritisakMirovanje.setMaximum(500)
+        self.krvniPritisakMirovanje.setMinimum(1)
         self.LAYOUT_A.addWidget(self.krvniPritisakMirovanje, *(25, 10))
 
         self.label7 = QLabel("Unesite nivo holesterola:")
         self.LAYOUT_A.addWidget(self.label7, *(30, 5))
         self.holesterolVrednost = QSpinBox()
         self.holesterolVrednost.setMaximum(500)
+        self.holesterolVrednost.setMinimum(1)
         self.LAYOUT_A.addWidget(self.holesterolVrednost, *(30, 10))
 
         self.label8 = QLabel("Fasting nivo secera u krvi:")
@@ -138,6 +144,7 @@ class CustomMainWindow(QMainWindow):
         self.LAYOUT_A.addWidget(self.label10, *(45, 5))
         self.maxOtkucajaSrcaVrednost = QSpinBox()
         self.maxOtkucajaSrcaVrednost.setMaximum(350)
+        self.maxOtkucajaSrcaVrednost.setMinimum(1)
         self.LAYOUT_A.addWidget(self.maxOtkucajaSrcaVrednost, *(45, 10))
 
         self.label12 = QLabel("Da li osecate bol kada trenirate?")
@@ -149,13 +156,15 @@ class CustomMainWindow(QMainWindow):
         self.label13 = QLabel("Unesite vrednost OldPeak-a:")
         self.LAYOUT_A.addWidget(self.label13, *(55, 5))
         self.oldpeakVrednost = QDoubleSpinBox()
-        self.oldpeakVrednost.setMaximum(500)
+        self.oldpeakVrednost.setMaximum(4)
+        self.oldpeakVrednost.setMinimum(0)
         self.LAYOUT_A.addWidget(self.oldpeakVrednost, *(55, 10))
 
         self.label14 = QLabel("Unesite vrednost ST slope:")
         self.LAYOUT_A.addWidget(self.label14, *(60, 5))
         self.STslopeVrednost = QSpinBox()
-        self.STslopeVrednost.setMaximum(500)
+        self.STslopeVrednost.setMaximum(3)
+        self.STslopeVrednost.setMinimum(0)
         self.LAYOUT_A.addWidget(self.STslopeVrednost, *(60, 10))
 
 

@@ -110,7 +110,7 @@ require 'resources/header.php';
                                 <td><input type='text' name="tezinaK"></td>
                             </tr>
                             <tr>
-                                <td>Visina u metrima:</td>
+                                <td>Visina u centimetrima:</td>
                                 <td><input type='text' name="visinaK"></td>
                             </tr>
                             <tr>
@@ -299,7 +299,7 @@ require 'resources/header.php';
                         <form name="BMIforma">
                     <table>
                        <tr><input type="text" name="tezina" placeholder="Unesi težinu (kg)" size="20"></tr>
-                       <tr><input type="text" name="visina" placeholder="Unesi visinu (m)" size="20"></tr>  <br>
+                       <tr><input type="text" name="visina" placeholder="Unesi visinu (cm)" size="20"></tr>  <br>
                        <tr> <br>&nbsp</tr> 
                         <tr> <input type="button" class="dugme_crveno" value="Izračunaj BMI" onClick="izracunajBmi()"></tr>  
                         <tr> <input type="text" name="bmi" placeholder="Vaš BMI" size="20"></tr>

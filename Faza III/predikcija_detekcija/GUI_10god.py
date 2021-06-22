@@ -111,6 +111,8 @@ class CustomMainWindow(QMainWindow):
         self.label4 = QLabel("Godine:")
         self.LAYOUT_A.addWidget(self.label4, *(15, 5))
         self.godineVrednost = QSpinBox()
+        self.godineVrednost.setMaximum(200)
+        self.godineVrednost.setMinimum(1)
         self.LAYOUT_A.addWidget(self.godineVrednost, *(15, 10))
 
         self.label5 = QLabel("Da li ste pusac?:")
@@ -123,6 +125,8 @@ class CustomMainWindow(QMainWindow):
         self.LAYOUT_A.addWidget(self.label6, *(25, 5))   # 5 je pomeraj na x osi, da li ce biti levo ili desno
         # zato je 5 leva kolona, a 10 desna, a 25 je na y osi, sto je manji broj to je pri vrhu
         self.cigNaDanVrednost = QSpinBox()
+        self.cigNaDanVrednost.setMaximum(100)
+        self.cigNaDanVrednost.setMinimum(0)
         self.LAYOUT_A.addWidget(self.cigNaDanVrednost, *(25, 10))
 
         self.label7 = QLabel("Da li koristite lekove za \nregulaciju krvnog pritiska?:")
@@ -152,12 +156,15 @@ class CustomMainWindow(QMainWindow):
         self.label12 = QLabel("Ukupan nivo holesterola:")
         self.LAYOUT_A.addWidget(self.label12, *(50, 5))
         self.totalHolesterolVrednost = QSpinBox()
+        self.totalHolesterolVrednost.setMaximum(300)
+        self.totalHolesterolVrednost.setMaximum(100)
         self.LAYOUT_A.addWidget(self.totalHolesterolVrednost, *(50, 10))
 
         self.label13 = QLabel("Gornji krvni pritisak:")
         self.LAYOUT_A.addWidget(self.label13, *(55, 5))
         self.krvnipritisakGVrednost = QDoubleSpinBox()
-        self.krvnipritisakGVrednost.setMaximum(500)
+        self.krvnipritisakGVrednost.setMaximum(300)
+        self.krvnipritisakGVrednost.setMinimum(50)
         self.krvnipritisakGVrednost.setDecimals(1)
         self.LAYOUT_A.addWidget(self.krvnipritisakGVrednost, *(55, 10))
 
@@ -165,25 +172,30 @@ class CustomMainWindow(QMainWindow):
         self.LAYOUT_A.addWidget(self.label14, *(60, 5))
         self.krvnipritisakDVrednost = QDoubleSpinBox()
         self.krvnipritisakDVrednost.setDecimals(1)
-        self.krvnipritisakDVrednost.setMaximum(500)
+        self.krvnipritisakDVrednost.setMaximum(300)
+        self.krvnipritisakDVrednost.setMinimum(10)
         self.LAYOUT_A.addWidget(self.krvnipritisakDVrednost, *(60, 10))
 
         self.label15 = QLabel("BMI:")
         self.LAYOUT_A.addWidget(self.label15, *(65, 5))
         self.bmiVrednost = QDoubleSpinBox()
         self.bmiVrednost.setDecimals(2)
-        self.bmiVrednost.setMaximum(100)
+        self.bmiVrednost.setMaximum(80)
+        self.bmiVrednost.setMinimum(15)
         self.LAYOUT_A.addWidget(self.bmiVrednost, *(65, 10))
 
         self.label16 = QLabel("Broj otkucaja srca:")
         self.LAYOUT_A.addWidget(self.label16, *(70, 5))
         self.brOtkSrcaVrednost = QSpinBox()
         self.brOtkSrcaVrednost.setMaximum(150)
+        self.brOtkSrcaVrednost.setMinimum(30)
         self.LAYOUT_A.addWidget(self.brOtkSrcaVrednost, *(70, 10))
 
         self.label17 = QLabel("Nivo glukoze u krvi:")
         self.LAYOUT_A.addWidget(self.label17, *(75, 5))
         self.glukozaVrednost = QSpinBox()
+        self.glukozaVrednost.setMaximum(250)
+        self.glukozaVrednost.setMinimum(50)
         self.LAYOUT_A.addWidget(self.glukozaVrednost, *(75, 10))
 
         self.label18 = QLabel("Skolovanje:")
