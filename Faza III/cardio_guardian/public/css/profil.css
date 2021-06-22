@@ -1,0 +1,68 @@
+body{
+    background-color:#f1f1f1;
+}
+
+.picture{
+    width:70%;
+	
+    padding-top: 50px;
+    box-shadow: 0 30px 10px 0 rgba(0,0,0,0.5);
+    padding-left:20px;
+    padding-right:20px;
+    margin-left: 15%;
+}
+
+.name{
+    text-align: center;
+    color:white;
+}  
+
+h3{
+    color: #021B79;
+}
+
+.velika_slova{
+    color: white;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: Oswald;
+}
+
+.slovaMala{
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: Oswald;
+}
+
+.slovaVelika{
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Oswald;
+}
+
+.slika{
+    padding-top: 20px;
+    background: rgb(220,41,24);
+    background: linear-gradient(90deg, rgb(216, 57, 43) 0%, rgba(234,76,61,1) 65%, rgb(228, 92, 92) 100%);
+}
+
+.dugmeOceniPsihologa {
+	width: 230px;
+	background-color: #021B79 !important;
+	color:white !important;  
+}
+
+.select-input{
+    height: 100%;
+    width: 100%;
+    outline:none;
+    padding-left:15px;
+    padding-bottom:5px;
+    font-size:17px;
+    border-radius:5px;
+    border: 1px solid black;
+    border-bottom-width:1px;
+    margin-top: 15px;
+}
