@@ -1,22 +1,22 @@
 import torch, random
 import math
 from torch.utils.data import Dataset
-from torch.utils.data import DataLoader ## za iteriranje, za batching, data loading process
-import torch.nn as nn  ## za kreiranje i treniranje neuralne mreže
-from pomocni import trening_procedura
-import pandas as pd  ## manipulacija podacima i analiza
-from torch.optim import lr_scheduler ## podesavanje learning rate
-import plotly.graph_objects as go ## za iscrtavanje grafika
-from plotly.subplots import make_subplots ## za iscrtavanje grafika
+from torch.utils.data import DataLoader ## for iterating, batching, data loading process
+import torch.nn as nn  ## for creating and training neural network
+from basic import training_procedure
+import pandas as pd  ## data manipulation and analysis
+from torch.optim import lr_scheduler ## adjusting learning rate
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 
-class LinearModel(nn.Module): ## izvedena iz nn.Module
+class LinearModel(nn.Module): ## derived from nn.Module
 
-    def __init__(self, input_dim): ## konstruktor
+    def __init__(self, input_dim): ## constructor
         super(LinearModel, self).__init__()
-        self.fc1 = nn.Sequential( ## fully connected - svaki neuron je povezan sa svakim iz prethodnog sloja
-            nn.Linear(input_dim, 40, bias=True), ## ulaza koliko ima, 50 izlaznih neurona
-            nn.ReLU(inplace=True))  ## f-ja aktivacije je ReLU
+        self.fc1 = nn.Sequential( ## fully connected - every neuron is connected from every neuron from last layer
+            nn.Linear(input_dim, 40, bias=True), ## number of inputs as it is, 40 outputs
+            nn.ReLU(inplace=True)) ##activation function
         self.fc2 = nn.Sequential(
             nn.Linear(40, 50, bias=True),
             nn.ReLU(inplace=True))
@@ -47,19 +47,19 @@ class NumpyDataset(Dataset):
     def __len__(self):
         return len(self.data)
 
-def count_ones_zeros(ys): ## ispis koliko ima 0 i 1 na izlazu tj y
+def count_ones_zeros(ys):
     ones = 0
     for y in ys:
         ones += y
-    print('Ima {} nula na izlazu and {} jedinica'.format(len(ys)-ones, ones))
+    print('There is {} zeros on output and {} ones'.format(len(ys)-ones, ones))
 
 if __name__ == '__main__':
-    model_number = '10god'
-    in_path = "./10god_predikcija/framingham.csv"
+    model_number = '10years'
+    in_path = "./10yearsPrediction/framingham.csv"
     saving_path = './model/Model_{}'.format(model_number)
-    train_proc = 70 #uzecemo 70% podataka za trening
-    val_proc = 20 #uzecemo 20% podataka za validaciju
-    test_proc = 10 #uzecemo 10% podataka za test
+    train_proc = 70
+    val_proc = 20
+    test_proc = 10
     batch_size = 25
     n_epochs = 50
     learning_rate = 0.01
@@ -67,8 +67,8 @@ if __name__ == '__main__':
     random.seed(1000)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     data = pd.read_csv(in_path, delimiter=',')
-    xs = [] #ulazi
-    ys = [] #izlazi
+    xs = [] #inputs
+    ys = [] #outputs
     for row in data.iterrows():
         if not math.isnan(row[1][-1]): #not a number
             ys.append(row[1][-1])
@@ -80,21 +80,21 @@ if __name__ == '__main__':
                     ys.pop()
                     xs.pop()
                     break
-    train_proc = int(len(ys)*train_proc/100) # uzimamo 70% za trening, ali od broja podataka koji ne sadrze nan
+    train_proc = int(len(ys)*train_proc/100) # we take 70% for training, but from those who are not NaN (not a number)
     val_proc = int(len(ys)*val_proc/100)
     test_proc = len(ys) - val_proc - train_proc
-    print('Svi podaci:')
+    print('All data:')
     count_ones_zeros(ys)
     c = list(zip(xs, ys))
     random.shuffle(c)
     xs, ys = zip(*c)
-    print('Trening:')
+    print('Training:')
     count_ones_zeros(ys[:train_proc])
-    print('Validacija:')
+    print('Validation:')
     count_ones_zeros(ys[train_proc:(train_proc+val_proc)])
 
     dataset_train = NumpyDataset(xs[:train_proc], ys[:train_proc])
-    dataloader_train = DataLoader(dataset_train, batch_size=batch_size, shuffle=True) #po epohi
+    dataloader_train = DataLoader(dataset_train, batch_size=batch_size, shuffle=True)
 
     dataset_validation = NumpyDataset(xs[train_proc:(train_proc+val_proc)], ys[train_proc:(train_proc+val_proc)])
     dataloader_validation = DataLoader(dataset_validation, batch_size=batch_size, shuffle=True)
@@ -108,16 +108,16 @@ if __name__ == '__main__':
         {'params': model.parameters()}
     ], lr=learning_rate, weight_decay=0.0005)
 
-    scheduler =  lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1) # na svakih 10 epoha se menja learning rate tj mnozi sa 0.1
+    scheduler =  lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1) # on every 10 epochs we multiply lr with 0.1
 
-    loss_function = nn.CrossEntropyLoss() # racuna loss modela, korisno ako imamo neizbalansiran set podataka kao sto imamo
+    loss_function = nn.CrossEntropyLoss() # calculating loss of the model, useful if the set is not balanced as in this case
 
     train_losses, val_losses, train_accuracies, val_accuracies, model \
-        = trening_procedura.train(model=model, train_dataloader=dataloader_train, val_dataloader=dataloader_validation,
+        = training_procedure.train(model=model, train_dataloader=dataloader_train, val_dataloader=dataloader_validation,
                                   optimizer=optimizer, n_epochs=n_epochs, loss_function=loss_function, scheduler=scheduler)
 
     torch.save(model.state_dict(), saving_path+'.pth')
-    print("Koristi se:  ", device)
+    print("Using:  ", device)
     e_fig = make_subplots(rows=2, cols=2, specs=[[{"colspan": 2}, None],
                                                  [{"colspan": 2}, None]])
     e_fig.add_trace(go.Scatter(y=train_losses, mode='lines',

@@ -10,48 +10,44 @@ def train(model, train_dataloader, val_dataloader, optimizer, n_epochs, loss_fun
     val_accuracies = []
 
     for epoch in range(n_epochs): # do n_epochs
-        model.train() # model se koristi za treniranje
+        model.train()
         correct_train_predictions = 0
         losses = []
 
-        for variables, ys in train_dataloader: # za svaki skup ulaznih podataka
+        for variables, ys in train_dataloader: # for every set of input data
             variables = variables.to(device)
             ys = ys.to(device)
-            output = model(variables)   # predikcija na osnovu variables tj ulaza
+            output = model(variables)   # prediction based on variables
 
-            optimizer.zero_grad() # u PyTorch moramo da postavimo gradijente na 0 pre propagacije unazad
-            loss = loss_function(output, ys.long())   # sta smo dobili kao output i vrednosti koje su tacne, pa izraunaj koliko je lose
-            loss.backward() # loss se propagira pozadi i racuna koliko bi trebalo da se updateuje sve od tezina
-            optimizer.step() # radi update parametara, update tezina
+            optimizer.zero_grad() # in PyTorch we need to set gradient to 0 before back propagation
+            loss = loss_function(output, ys.long())   # compare output and correct values and get loss
+            loss.backward() # loss is being propagated backwards and weight update is beeing calculated
+            optimizer.step() # update
 
-            losses.append(loss.item())  # u niz loss za batcheve se doda loss za batch
+            losses.append(loss.item())  # append in array of losses for current batch
 
-            n_correct = torch.sum(output.argmax(1) == ys).item()  # one hot encoding - imamo 2 klase(0 i 1) tj 2 izlaza i gde je 1 na izlazu ta je klasa
-            # koji je veci od 2 izlaza i onda argmax vraca indeks tog koji je veci (0 ili 1)
-            # ys je tacna vrednost
+            n_correct = torch.sum(output.argmax(1) == ys).item()  # one hot encoding - number of outputs is number of classes, only one output is the biggest
+            # argmax returns index of the bigger one output
+            # ys is correct value
 
             correct_train_predictions += n_correct
 
         train_losses.append(np.mean(np.array(losses)))
         train_accuracies.append(100.0*correct_train_predictions/len(train_dataloader.dataset))
 
-        # Evaluacija
-        model.eval()  #model se koristi za evaluaciju
+        # Evaluation
+        model.eval()
         correct_val_predictions = 0
         losses = []
 
-        with torch.no_grad(): # iskljuci racunanje gradijenta, ne treniramo
-            # torch.no_grad smanjuje zauzece memorije
+        with torch.no_grad(): # torch.no_grad saves memory occupation
             for variables, ys in val_dataloader:
                 variables = variables.to(device)
                 ys = ys.to(device)
-                output = model(variables) # prosledimo ulaze, i dobijemo izlaz
-                loss = loss_function(output, ys)  # sta smo dobili kao output i vrednosti koje su tacne, pa izraunaj koliko je lose
-
-                losses.append(loss.item())   # u niz loss za batcheve se doda loss za batch
-                n_correct_v = torch.sum(output.argmax(1) == ys).item()  # one hot encoding - imamo 2 klase(0 i 1) tj 2 izlaza i gde je 1 na izlazu ta je klasa
-                 # koji je veci od 2 izlaza i onda argmax vraca indeks tog koji je veci (0 ili 1)
-                 # ys je tacna vrednost
+                output = model(variables) # output based on given inputs
+                loss = loss_function(output, ys)
+                losses.append(loss.item())
+                n_correct_v = torch.sum(output.argmax(1) == ys).item()  # one hot encoding
                 correct_val_predictions += n_correct_v
 
         val_losses.append(np.mean(np.array(losses)))
